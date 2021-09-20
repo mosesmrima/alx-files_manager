@@ -2,7 +2,7 @@ import sha1 from 'sha1';
 import DBClient from '../utils/db';
 
 class UsersController {
-  static async postNew(request, response) {
+    static async postNew(request, response) {
     const newEmail = request.body.email;
     if (!newEmail) return response.status(400).send({ error: 'Missing email' });
 
